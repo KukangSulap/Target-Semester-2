@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    This linear layout contains a single item in the list of tasks displayed in the MainActivity
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.barney.to_dolist.MainActivity">
+
+    <!--
+        This horizontal linear layout displays the description and priority of a task
+        in a single horizontal line
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/padding">
+
+        <!-- TextView that displays the description of a task -->
+        <TextView
+            android:id="@+id/taskDescription"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="12"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:textColor="@android:color/primary_text_light" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <!-- A priority circle that is colored in programmatically in the adapter code -->
+            <TextView
+                android:id="@+id/priorityTextView"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="@dimen/priority_circle"
+                android:layout_height="@dimen/priority_circle"
+                android:layout_gravity="center"
+                android:background="@drawable/priority_circle"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@android:color/primary_text_light" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
